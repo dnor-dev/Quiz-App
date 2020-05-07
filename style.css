@@ -299,11 +299,12 @@ tr:nth-child(odd){
     padding: 1rem 1.5rem;
   }
   .grid-system {
-    width: 350px;
+    max-width: 300px;
     margin: auto;
   }
   .grid-2 {
-    width: 300px;
+    width: 280px;
+    margin: auto;
     margin-bottom: 2rem;
   }
 
@@ -321,6 +322,7 @@ tr:nth-child(odd){
   }
   .grid-2 .question li {
     list-style: none;
+    margin-left: 0;
     padding: 0.7rem;
     font-size: 0.7rem;
   }
@@ -353,6 +355,27 @@ tr:nth-child(odd){
   .results p{
     font-size: 1rem;
   }
+}
+
+@media screen and (max-width:360px){
+ .welcome{
+   width: 280px;
+   margin: auto;
+ }
+ 
+  .grid-system{
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .grid-2{
+    width: 280px;
+    margin: auto;
+  }
+  .grid-2 .question li {
+    margin-left: 0;
+  }
+
 }
 
 @media screen and (max-height: 500px) {
