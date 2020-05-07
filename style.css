@@ -1,0 +1,403 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Titillium+Web|Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald|Quicksand|Titillium+Web|Ubuntu&display=swap");
+
+:root {
+  --primary-color: #e5e4e2;
+  --secondary-color: #151b54;
+  --primary-color-hover: #d1d0ce;
+  --secondary-color-hover: #2b3856;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--primary-color);
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+  color: #333;
+}
+
+/* Global */
+.container, .containment{
+  max-width: 1000px;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+
+
+
+.btn {
+  border: none;
+  background: var(--secondary-color);
+  padding: 1rem 2.5rem;
+  border-radius: 10px;
+  margin: 1.5rem;
+  margin-bottom: 0;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.btn:hover {
+  background: var(--secondary-color-hover);
+  transition: all 1000ms;
+  color: var(--primary-color-hover);
+}
+
+
+.green-correct{
+  background: green;
+  padding: 1rem;
+  width: 70%;
+  color: #fff;
+  margin: 1rem 0;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+
+}
+
+.red-wrong{
+  background: red;
+  padding: 1rem;
+  margin: 1rem 0;
+  width: 70%;
+  color: #fff;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.disabled{
+  pointer-events: none;
+}
+/* Table */
+table {
+  border-collapse: collapse;
+  width: 400px;
+  margin: auto;
+  padding: 0;
+}
+
+th,tr,td{
+  text-align: center;
+}
+
+th{
+  height: 50px;
+  padding: 5px;
+  font-weight: bolder;
+  font-size: 1.5rem;
+  background-color: var(--primary-color);
+}
+td{
+  padding: 1rem;
+}
+
+
+tr:nth-child(odd){
+  background-color:var(--primary-color-hover);
+}
+
+.table{
+  padding-top: 0;
+  margin-top: 0;
+  margin-bottom: 4rem;
+}
+.table h2{
+  font-size: 2.2rem;
+  margin-bottom: 0;
+}
+
+
+
+/* Quiz Header */
+#quiz-header {
+  color: var(--secondary-color);
+  font-family: "Oswald", sans-serif;
+  font-size: 3rem;
+}
+
+#quiz-header2 {
+  color: var(--secondary-color-hover);
+  font-family: "Ubuntu", sans-serif;
+  font-size: 2.8rem;
+}
+
+#quiz-header3 {
+  color: var(--secondary-color-hover);
+  font-family: "Titillium Web", sans-serif;
+  font-size: 3rem;
+}
+
+.container h1 i {
+  transform: rotate(30deg);
+  color: var(--secondary-color);
+  font-size: 3rem;
+  animation-name: icon;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 5;
+}
+
+/* Welcome Page*/
+
+.welcome {
+  background: var(--primary-color-hover);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px #333;
+  width: 450px;
+  margin: auto;
+}
+
+.welcome h2 {
+  padding: 1rem 1rem 0rem 1rem;
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+.welcome p {
+  padding: 0rem 1rem 1rem 1rem;
+  font-size: 1.7rem;
+  font-weight: lighter;
+  margin-top: 1.5rem;
+}
+
+
+
+/* Questions page */
+
+.grid-2 {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 2fr;
+  margin: auto;
+  margin-bottom: 0.5rem;
+  width: 900px;
+}
+.question,
+.score {
+  background-color: var(--primary-color-hover);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #333;
+}
+
+.grid-2 .question h2 {
+  text-align: center;
+  padding: 1rem 2rem;
+  margin-bottom: 0;
+  font-size: 2rem;
+}
+
+.grid-2 .question p {
+  margin-top: 0;
+  text-align: center;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+}
+
+.grid-2 .question li {
+  list-style: none;
+  text-align: left;
+  padding: 1rem;
+  font-size: 1.2rem;
+  transition: font-size ease-in 200ms;
+}
+.grid-2 .question li:last-child{
+  margin-bottom: 2.3rem;
+  padding-bottom: 2rem;
+}
+
+
+.grid-2 .question li:hover {
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+
+
+/* Results page */
+
+.containment{
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  z-index: 10;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: display ease-in-out 300ms;
+}
+.results{
+  transition: display ease-in-out 300ms;
+  background: var(--primary-color-hover);
+  padding: 1rem 1rem 3rem 1rem;
+  flex-basis: 700px;
+  box-shadow: 0px 0px 20px #333;
+  border-radius: 7px;
+}
+
+.results h2{
+  font-size: 3rem;
+  margin: 0;
+}
+
+.results p{
+  font-size: 1.6rem;
+}
+
+
+/* Animations */
+@keyframes icon{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Media Queries */
+
+@media screen and (max-width: 728px) {
+  #quiz-header,
+  #quiz-header2,
+  #quiz-header3,
+  .container h1 i {
+    font-size: 2rem;
+  }
+
+  .welcome {
+    width: 300px;
+  }
+
+  .welcome h2 {
+    font-size: 2rem;
+  }
+
+  .welcome p {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    margin: 0.7rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+  }
+  .grid-system {
+    width: 350px;
+    margin: auto;
+  }
+  .grid-2 {
+    width: 300px;
+    margin-bottom: 2rem;
+  }
+
+  .grid-2 .question h2 {
+    text-align: center;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .grid-2 .question p {
+    margin-top: 0;
+    text-align: center;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .grid-2 .question li {
+    list-style: none;
+    padding: 0.7rem;
+    font-size: 0.7rem;
+  }
+  .grid-2 .question li:hover {
+    font-size: 0.8rem;
+  }
+
+  table{
+    width: 200px;
+  }
+
+  th{
+    font-size: 1rem;
+  }
+  .table h2{
+    font-size: 1.5rem;
+  }
+  .containment{
+    width: 80%;
+  }
+  .results{
+    padding: 1rem;
+    margin: auto;
+    flex-basis: 400px;
+  }
+
+  .results h2{
+    font-size: 2rem;
+  }
+  .results p{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  
+  .grid-system {
+    width: 600px;
+    margin: auto;
+  }
+
+  .grid-2 {
+    width: 600px;
+    margin: auto;
+    margin-bottom: 4rem;
+  }
+
+  .grid-2 .question li:last-child{
+    margin-bottom: 0;
+  }
+
+  .table{
+    margin-top: 0;
+  }
+
+  .containment{
+    margin: auto;
+  }
+
+  .results{
+    margin: auto;
+    flex-basis: 450px;
+  }
+}
+
+@media screen and (width:768px) {
+  .grid-system {
+   width: 600px;
+   margin: auto;
+  }
+  .grid-2{
+    width: 600px;
+    margin-bottom: 2rem;
+  }
+
+  .results{
+    margin: auto;
+    flex-basis: 600px;
+  }
+}

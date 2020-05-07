@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuizApp | Questions</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css"
+      integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU="
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="animated slideInDown">
+          <span id="quiz-header">my</span><span id="quiz-header2">Quiz</span
+          ><span id="quiz-header3">app</span><i class="fa fa-trophy"></i>
+        </h1>
+        <div class="grid-2">
+          <div class="question animated slideInLeft">
+            <h2 class="Question"></h2>
+            <p class="statement"></p>
+           <ul class="options">
+            <li id="0" class="option1" onclick="check(this)"></li>
+            <li  id="1" class="option2" onclick="check(this)"></li>
+            <li  id="2" class="option3" onclick="check(this)"></li>
+            <li  id="3" class="option4" onclick="check(this)"></li>
+           </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <a class="btn"
+          id="nextQuestion">Next <i class="fa fa-arrow-right"></i
+        ></a>
+      </div>
+
+      <div class="container table">
+        <h2>Score Board</h2>
+        <table>
+          <thead>
+            <th>Question<br>Answered</th>
+            <th>Points</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="pointQuestion"></td>
+              <td id="tableScore"></td>
+            </tr>
+            <tr>
+              <td class="pointQuestion"></td>
+              <td id="tableScore"></td>
+            </tr>
+            <tr>
+              <td class="pointQuestion"></td>
+              <td id="tableScore"></td>
+            </tr>
+            <tr>
+              <td class="pointQuestion"></td>
+              <td id="tableScore"></td>
+            </tr>
+            <tr>
+              <td class="pointQuestion"></td>
+              <td id="tableScore"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+
+
+    <div class="containment">
+
+     <div class="results">
+         <h2 class="remarks"></h2>
+         <p id="scoreRemarks"></p>
+         <a href="index.html" class="btn">Play Again&#128523;</a>
+     </div>
+  </div>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
