@@ -38,7 +38,7 @@ const questions = [
     answer: 2,
   },
   {
-    q: "How do you call a function in javascript?",
+    q: "How do you create a function in javascript?",
     options: [
       "a). functionInitiate",
       "b). initiateFunction()",
